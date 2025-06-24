@@ -3,13 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>JavaScript</title>
+    
+    <style>
+        body{
+            background-color: aquamarine;
+        }
+        .but{
+            padding: 12px 24px;
+            border: none;
+            border-radius: 20px ;
+            background-color: chocolate;
+            cursor: pointer;
+        }
+        input{
+            height: 30px;
+            width: 25%;
+            
+
+        }
+    </style>
 </head>
 <body>
     <h1>JavaScript</h1>
-
+<script>
+let user={};
+let users=[];
+const addUser=()=>{
+  users.push({...user});
+  return users.name;
+}
+function gr(){
+   document.getElementById("rr").innerHTML=addUser();
+}
+</script>
 
    <h2> <a href="shoppingcart/index.html">Shopping Cart</a></h2>
+<div>
+    <fieldset>
+    <legend style="font-size: x-large;">Registration Form</legend>
 
+    <pre>
+        <input type="text" placeholder="Enter Name" onchange="user.name=event.target.value"/>
+
+        <input type="text" placeholder="Enter email" onchange="user.email=event.target.value"/>
+
+        <input type="password" placeholder="Enter password" onchange="user.pass=event.target.value"/>
+
+        <button onclick="gr()" class="but">Submit</button>
+    </pre>
+    </fieldset>
+
+    <h3 id="rr">
+
+    </h3>
+</div>
 </body>
 </html>
