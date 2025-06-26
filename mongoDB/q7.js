@@ -1,6 +1,7 @@
 //Aggrgation more    to find() performance wise it is better
 //Aggragation pipeline for grouping and getting compound results
 //pull opration
+//lookup opration
 db.employees.aggregate([
     {$match:{department:"IT"}},
     {$project:{name:1,salary:1}},
@@ -109,6 +110,27 @@ db.students.aggregate([
 db.students.aggregate([
 
 ])
+
+db.address.insertOne(
+    {
+        studentId:ObjectId('685cdd85cc3084fdf6748a60'),
+        city:"",
+        country:"USA"
+    }
+)
+
+// used to connect one other 
+db.students.aggregate([
+    {$lookup:{
+        from:"address",
+        localField:"_id",
+        foreignField:"studentId",
+        as:"address"
+    }},
+    {$unwind:"$address"},
+    {$project:{name:1,"address.city":1,"address.country":1}}
+])//$unwind used to unwind array to object  without it we get address as a array
+
 
 
 
