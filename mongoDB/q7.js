@@ -131,6 +131,12 @@ db.students.aggregate([
     {$project:{name:1,"address.city":1,"address.country":1}}
 ])//$unwind used to unwind array to object  without it we get address as a array
 
+//example
+db.employees.aggregate([
+    {$project:{name:1,location:1}},
+    {$unwind:"$location"}
+])
+
 
 
 
