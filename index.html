@@ -1,40 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Akula Manoj Kumar</title>
-    <style>
-        body{
-            background-color: orange;
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Akula Manoj Kumar</title>
+  <style>
+    /* Reset and base styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-        }
-    </style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #e0f7fa, #ffffff);
+      color: #333;
+      padding: 2rem;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 3rem;
+      color: #0d47a1;
+      margin-bottom: 1.5rem;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      font-size: 1.8rem;
+      color: #01579b;
+      margin-top: 2rem;
+      border-left: 6px solid #0288d1;
+      padding-left: 10px;
+    }
+
+    a {
+      text-decoration: none;
+      color: #1565c0;
+      transition: all 0.3s ease;
+    }
+
+    a:hover {
+      color: #d84315;
+      text-decoration: underline;
+    }
+
+    ol, ul {
+      padding-left: 2rem;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    ol li, ul li {
+      margin: 0.6rem 0;
+      font-size: 1.2rem;
+      padding: 0.4rem;
+      background-color: #e3f2fd;
+      border-radius: 6px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+      transition: transform 0.2s;
+    }
+
+    ol li:hover, ul li:hover {
+      transform: translateX(5px);
+      background-color: yellowgreen;
+    }
+
+    /* Responsive Styling */
+    @media (max-width: 768px) {
+      body {
+        padding: 1rem;
+      }
+
+      h1 {
+        font-size: 2.2rem;
+      }
+
+      h2 {
+        font-size: 1.5rem;
+      }
+
+      ol li, ul li {
+        font-size: 1.1rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 1.8rem;
+      }
+
+      h2 {
+        font-size: 1.3rem;
+      }
+
+      ol li, ul li {
+        font-size: 1rem;
+      }
+    }
+  </style>
 </head>
 <body>
-    <h1>Akula Manoj Kumar</h1>
-    <h2><a href="portfolio/index.html">My Portfolio</a></h2>
+  <h1>Akula Manoj Kumar</h1>
+  <h2><a href="portfolio/index.html">My Portfolio</a></h2>
 
-<h2>My Projects</h2>
-<ol style="font-size: larger;">
+  <h2>My Projects</h2>
+  <ol>
     <li><a href="p1/index.html">Project 1</a></li>
-     <li><a href="p2/index.html">Project 2</a></li>
-</ol>
-   <h2>My Assignments</h2>
-   <ol style="font-size: larger;">
-    <li> <a href="a1/index.html">Assignments 1</a></li>
-    <li> <A href="a2/index.html">Assignments 2</A></li>
-   </ol>
-<h2>Web Tools</h2>
+    <li><a href="p2/index.html">Project 2</a></li>
+  </ol>
 
-<ul style="font-size: larger;">
-    <li>   <a href="HTML/index.html">HTML</a></li>
-      <li> <a href="CSS/">CSS</a></li>
-      <li> <a href="JavaScript/">Javascript</a></li>
-      <li><a href="mongoDB/index.html">MongoDB</a></li>
+  <h2>My Assignments</h2>
+  <ol>
+    <li><a href="a1/index.html">Assignments 1</a></li>
+    <li><a href="a2/index.html">Assignments 2</a></li>
+  </ol>
+
+  <h2>Web Tools</h2>
+  <ul>
+    <li><a href="HTML/index.html">HTML</a></li>
+    <li><a href="CSS/">CSS</a></li>
+    <li><a href="JavaScript/">Javascript</a></li>
+    <li><a href="mongoDB/index.html">MongoDB</a></li>
     <li><a href="https://www.msn.com/en-in/entertainment/hollywood/13-hollywood-mystery-movies-to-satisfy-the-detective-in-you/ar-AA1FHYGu?ocid=msedgntp&pc=NMTS&cvid=6885cd0630344e379ffe104660d582f9&ei=8">Movie</a></li>
     <li><a href="https://www.msn.com/en-in/money/technology/top-10-most-popular-netflix-movies-of-all-time/ar-AA1FZXGN?ocid=msedgntp&pc=NMTS&cvid=5c189dae8f6a41afdb9e7dac16e6a43c&ei=22">Movie2</a></li>
-  </ul>  
-
+  </ul>
 </body>
 </html>
