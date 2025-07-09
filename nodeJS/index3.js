@@ -34,7 +34,16 @@ const auth = (req, res, next) => {
     return res.status(403).json({ message: "Token verification failed" });
   }
 };
-
+//
+const author=(role)=>{
+  return (req,res,next)=>{
+    if(req.role==="admin"){
+      next()
+    }else{
+      return res.status(400).json({message:"Unauthorized Access"});
+    }
+  }
+}
 
 
 
@@ -50,13 +59,19 @@ app.post("/login",(req,res)=>{
   }
 })
 
-
-
-app.listen(3000,()=>{
-    console.log("server started at 3000");
+app.post("/register",async(req,res)=>{
+  const {name,email,pass,role}=req.body;
+  const hashpwd=bcrypt.hash(pass,SECRET);
+  
 })
 
 
 app.get("/users",auth,(req,res)=>{
   res.json(users);
 });
+
+
+
+app.listen(3000,()=>{
+    console.log("server started at 3000");
+})
